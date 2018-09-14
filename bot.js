@@ -236,8 +236,9 @@ message.channel.send({embed:embed}).then(message => message.delete(5000));
 
 //=============================== - [ Games Commands ] - ===================================
 
+ 
  client.on('message' , message => {
-  var prefix = ".";
+  var prefix = "#";
   if(message.author.bot) return;
 
   if(message.content.startsWith(prefix + "xo")) {
@@ -252,7 +253,7 @@ message.channel.send({embed:embed}).then(message => message.delete(5000));
       random1 = 0;
       random2 = 0;
     }
-    let player1_id = array_of_mentions[random1].id;
+    let player1_id = message.author.id;
     let player2_id = array_of_mentions[random2].id;
     var turn_id = player1_id;
     var symbol = symbols[0];
@@ -294,7 +295,7 @@ message.channel.send({embed:embed}).then(message => message.delete(5000));
     .catch(console.error);
   }
   else {
-    message.reply(` :anger: \`Use : ${prefix}xo @player1 @player2\``)
+    message.reply(` :anger: \`Use : ${prefix}xo @player\``)
     .then(console.log("Successful error reply"))
     .catch(console.error);
   }
