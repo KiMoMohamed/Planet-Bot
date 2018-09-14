@@ -27,7 +27,7 @@ client.on('ready', () => {
   console.log(`Users : [ " ${client.users.size} " ]`);
   console.log(`Channels : [ " ${client.channels.size} " ]`);
   console.log('By : '+`${client.users.get("290908670529896448").username}`)
-   client.user.setActivity("You | .help",{type: 'WATCHING'})
+   client.user.setActivity(".help | .inv",{type: 'WATCHING'})
    client.user.setStatus("dnd")
 });
 
