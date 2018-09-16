@@ -172,7 +172,7 @@ const prefix = "#";
   console.log(`Servers : [ " ${client.guilds.size} " ]`);
   console.log(`Users : [ " ${client.users.size} " ]`);
   console.log(`Channels : [ " ${client.channels.size} " ]`);
-   client.user.setActivity(".help | .inv",{type: 'WATCHING'})
+   client.user.setActivity("#help | #inv",{type: 'WATCHING'})
    client.user.setStatus("dnd")
 });
 
